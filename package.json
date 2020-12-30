@@ -1,0 +1,32 @@
+{
+  "name": "tamil-words",
+  "version": "1.0.0",
+  "description": "Translate Tamil Words to English.",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "php -S localhost:6001"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mskian/tamil-words.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mskian/tamil-words/issues"
+  },
+  "homepage": "https://github.com/mskian/tamil-words/#readme",
+  "keywords": [
+    "tamil",
+    "tamil words",
+    "translate",
+    "random"
+  ],
+  "author": "santhosh veer",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "prompt-sync": "^4.2.0"
+  }
+}
