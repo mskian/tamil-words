@@ -1,11 +1,15 @@
 # Tamil Words
 
-Tamil words Collections with English Meaning - SQL File
+Tamil words Collections with English Meaning.
 
 ## API
 
-```php
+```html
 http://localhost:6001/translate.php?word=example
+```
+
+```json
+[{"tamilword":"உதாரணமாக","englishmeaning":"example"}]
 ```
 
 ## Module
