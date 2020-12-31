@@ -1,5 +1,7 @@
 # Tamil Words
 
+![Translate test](https://github.com/mskian/tamil-words/workflows/Translate%20test/badge.svg)  
+
 Tamil words Collections with English Meaning.
 
 ## Setup
