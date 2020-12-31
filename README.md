@@ -2,6 +2,22 @@
 
 Tamil words Collections with English Meaning.
 
+## Setup
+
+- Setup Translate API
+
+```sh
+cd public
+composer install
+```
+
+- Setup Store for Pull the data into Database
+
+```sh
+cd store
+yarn
+```
+
 ## API
 
 - English to Tamil
