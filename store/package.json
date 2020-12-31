@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "php -S localhost:6001"
+    "english" : "node index.js",
+    "tamil" : "node tamil.js",
+    "start": "php -S localhost:6001 -t ../public"
   },
   "repository": {
     "type": "git",
