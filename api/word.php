@@ -14,16 +14,14 @@ require 'config.php';
 $db_connection = new Database();
 $conn = $db_connection->dbConnection();
 $data = '';
-$Get_pronounce = '';
 
-$query = "SELECT * FROM tamil_word ORDER by RAND() limit 1";
+$query = "SELECT * FROM tamil_words ORDER by RAND() limit 1";
  $stmt = $conn->prepare($query);
  $stmt->execute();
  $data = array();
  if($stmt->execute()){
  while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
-  $Get_pronounce = (!empty($row['pronounce']) ? $row['pronounce'] : 'Not Available');
-  $data = [['id' => $row['id'], 'tamilword' => $row['tamilword'], 'englishmeaning' => $row['englishmeaning'], 'tamilpronounce' => $Get_pronounce]];
+  $data = [['id' => $row['id'], 'tamilword' => $row['tamilword'], 'englishmeaning' => $row['englishmeaning']]];
  }
 }
 
