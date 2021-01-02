@@ -7,8 +7,8 @@ SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
 SET NAMES utf8mb4;
 
-DROP TABLE IF EXISTS `tamil_words`;
-CREATE TABLE `tamil_words` (
+DROP TABLE IF EXISTS `tamil_word`;
+CREATE TABLE `tamil_word` (
   `id` int NOT NULL AUTO_INCREMENT,
   `tamilword` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `englishmeaning` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE `tamil_words` (
   UNIQUE KEY `englishmeaning` (`englishmeaning`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `tamil_words` (`id`, `tamilword`, `englishmeaning`, `pronounce`) VALUES
+INSERT INTO `tamil_word` (`id`, `tamilword`, `englishmeaning`, `pronounce`) VALUES
 (1,	'அம்மா',	'mother',	'amma'),
 (2,	'தந்தை',	'father',	'appa'),
 (3,	'என',	'as',	'yene'),
@@ -497,7 +497,7 @@ INSERT INTO `tamil_words` (`id`, `tamilword`, `englishmeaning`, `pronounce`) VAL
 (521,	'திரவ',	'liquid',	''),
 (522,	'ஒரே மாதிரியான',	'stereotyped',	''),
 (523,	'வெறுக்கத்தக்க',	'spiteful',	''),
-(524,	'மருந்து',	'medicine',	''),
+(524,	'மருத்தம்',	'Medicine',	'marutham'),
 (526,	'வடிவம்',	'form',	''),
 (527,	'சீஸ்',	'cheese',	''),
 (528,	'steer',	'steer',	''),
@@ -1037,6 +1037,9 @@ INSERT INTO `tamil_words` (`id`, `tamilword`, `englishmeaning`, `pronounce`) VAL
 (1143,	'கனமான',	'Heavy',	'kanamana'),
 (1145,	'வெகுஜன',	'massy',	'massy'),
 (1147,	'தவிப்பும்',	'Suffering',	'thavipu'),
-(1148,	'துடிப்பும்',	'Pulse',	'thudipu');
+(1148,	'துடிப்பும்',	'Pulse',	'thudipu'),
+(1149,	'வா மச்சான்',	'Vaa machaan',	'Vaa machaan'),
+(1150,	'நண்பா',	'buddy',	'nanba'),
+(1152,	'கணிதர்',	'Mathematician',	'kanithaar');
 
--- 2021-01-01 15:14:27
+-- 2021-01-02 05:50:59

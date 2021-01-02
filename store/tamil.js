@@ -4,7 +4,8 @@ const qs = require('querystring');
 require('dotenv').config();
 
 const words = prompt('Enter the Tamil Word: ');
-if (words == 0) {
+const Tanglish_word = prompt('Enter the Tanglish Word: ');
+if (words == 0 || Tanglish_word == 0) {
     console.log('empty data');
 } else {
     const tamil_word = encodeURI(words);
@@ -12,21 +13,23 @@ if (words == 0) {
         .then(function(response) {
             var tamil = response.data[0].tamilword;
             var english = response.data[0].englishmeaning;
+            var pronunciation = Tanglish_word;
             console.log(tamil + '\n');
             console.log(english);
-            gotifyMessage(tamil, english);
+            gotifyMessage(tamil, english, pronunciation);
         })
         .catch(function(error) {
             console.log(error);
         })
 
-    function gotifyMessage(tamilword, englishword) {
+    function gotifyMessage(tamilword, englishword, tanglishword) {
         var API_URL = process.env.APIURL;
         if (API_URL) {
             var url = API_URL
             var bodyFormData = {
                 'tamil': tamilword,
-                'english': englishword
+                'english': englishword,
+                'tanglish': tanglishword
             };
             axios({
                     method: 'POST',

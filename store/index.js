@@ -3,29 +3,32 @@ const prompt = require('prompt-sync')();
 const qs = require('querystring');
 require('dotenv').config();
 
-const words = prompt('Enter the Englist Word: ');
-if (words == 0) {
-    console.log('empty data');
+const words = prompt('Enter the English Word: ');
+const Tanglish_word = prompt('Enter the Tanglish Word: ');
+if (words == 0 || Tanglish_word == 0) {
+    console.log('Empty data - Please Fill all Data');
 } else {
     axios.get(`http://localhost:6001/translate.php?word=${words}`)
         .then(function(response) {
             var tamil = response.data[0].tamilword;
             var english = response.data[0].englishmeaning;
+            var pronunciation = Tanglish_word;
             console.log(tamil + '\n');
             console.log(english);
-            gotifyMessage(tamil, english);
+            gotifyMessage(tamil, english, pronunciation);
         })
         .catch(function(error) {
             console.log(error);
         })
 
-    function gotifyMessage(tamilword, englishword) {
+    function gotifyMessage(tamilword, englishword, tanglishword) {
         var API_URL = process.env.APIURL;
         if (API_URL) {
             var url = API_URL
             var bodyFormData = {
                 'tamil': tamilword,
-                'english': englishword
+                'english': englishword,
+                'tanglish': tanglishword
             };
             axios({
                     method: 'POST',
