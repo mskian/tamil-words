@@ -367,16 +367,16 @@
         },
         {
             "name": "stichoza/google-translate-php",
-            "version": "v4.1.2",
+            "version": "v4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Stichoza/google-translate-php.git",
-                "reference": "28cc8bcf7e39069d2f41b3905dea9d8f04c30b82"
+                "reference": "9e4808cf6f3f1e89f06e2129c46f58eeca658428"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Stichoza/google-translate-php/zipball/28cc8bcf7e39069d2f41b3905dea9d8f04c30b82",
-                "reference": "28cc8bcf7e39069d2f41b3905dea9d8f04c30b82",
+                "url": "https://api.github.com/repos/Stichoza/google-translate-php/zipball/9e4808cf6f3f1e89f06e2129c46f58eeca658428",
+                "reference": "9e4808cf6f3f1e89f06e2129c46f58eeca658428",
                 "shasum": ""
             },
             "require": {
@@ -412,7 +412,17 @@
                 "translate",
                 "translator"
             ],
-            "time": "2020-12-19T17:53:52+00:00"
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/stichoza",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/stichoza",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2021-01-26T22:19:49+00:00"
         }
     ],
     "packages-dev": [],
